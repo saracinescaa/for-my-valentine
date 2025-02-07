@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuoi essere il mio Valentine?</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe6ea;
+            color: #d14772;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            background-color: #ffb6c1;
+            color: #d14772;
+            border: 2px solid #d14772;
+            padding: 15px 30px;
+            font-size: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            cursor: pointer;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        button:hover {
+            background-color: #ff8fa3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Davide Artuso, vuoi essere il mio San Valentino?</h1>
+   <img src="gatti.jpg" alt="Gatti innamorati" width="300" style="display: block; margin: auto; border-radius: 10px;">
+    <div class="button-container">
+        <button onclick="showResponse(true)">Yes</button>
+        <button onclick="showResponse(false)">No</button>
+    </div>
+    <p id="response"></p>
+    <script>
+        function showResponse(answer) {
+            const responseText = document.getElementById("response");
+            if (answer) {
+                responseText.innerHTML = "Ottima scelta, pookie!";
+            } else {
+                responseText.innerHTML = "Rattuso, credo tu abbia sbagliato a schiacciare!";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
